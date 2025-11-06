@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!--Dev Icon Fonts-->
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
 
 
   <title>Everton David's Personal Portfolio</title>
@@ -19,11 +19,21 @@
 
 <body>
 
+  <!-- Language Switcher -->
+  <div id="language-switcher">
+    <button id="lang-en" class="lang-btn active" title="English">
+      <span class="flag">🇺🇸</span>
+    </button>
+    <button id="lang-pt" class="lang-btn" title="Português">
+      <span class="flag">🇧🇷</span>
+    </button>
+  </div>
+
   <main id="container">
     <aside id="bio-container">
       <h2>Everton David</h2>
       <img id="bio-img" src="img/everton david_senior software engineer_cto_head it_principal software engineer_it director.png" alt="Everton David">
-      <p><span class="highlight">Engineering Manager | Software Architecture & System Design | DevOps & Cloud | Team Leadership</span></p>
+      <p><span class="highlight">Software Engineering Manager | Software Architecture & System Design | AI & Machine Learning Engineering | DevOps & Cloud | Team Leadership</span></p>
       <p id="welcome-text">Welcome</p>
       <ul id="social-container">
         <li><a href="https://www.linkedin.com/in/evertondavid/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
@@ -43,24 +53,38 @@
         I excel in strategic leadership, large-scale project management, and digital transformation.
       </p>
       <p class="description">
-        I develop and implement scalable, integrated solutions that drive efficiency and foster innovation. Leading diverse teams,
-        I cultivate a high-performance culture where creativity thrives.
+        I develop and implement scalable, integrated solutions that drive efficiency and foster innovation.
+        Leading a diverse team, I am committed to cultivating a high-performance environment where creativity thrives.
       </p>
       <p class="description">
-        My expertise spans <span class="highlight">negotiation, budget management, ROI analysis, and contract management (SLAs & SLOs)</span>,
-        ensuring financial and operational excellence. I have deep knowledge of predictive and agile methodologies,
-        IT outsourcing, and corporate technology deployment, delivering strategic tech solutions that boost revenue, streamline operations,
-        and create lasting business impact.
+        My expertise encompasses <span class="highlight">negotiation, budget management, ROI analysis, and the management of complex contracts (SLAs and SLOs),</span>,
+        ensuring both financial and operational excellence.
+        I deeply understand predictive and incremental project methodologies, IT outsourcing, and deploying transformative corporate technologies.
       </p>
       <p class="description">
-        Skilled in stakeholder engagement, I align technology with business goals through a structured approach that integrates software engineering and strategy.
-        Passionate about talent development, I mentor global teams, fostering innovation, agility, and collaboration.
+        As a passionate leader focused on <span class="highlight">talent development</span>,
+        I mentor multidisciplinary and <span class="highlight">global teams</span>,
+        striving to create opportunities for professional growth that align with the business's evolving needs.
       </p>
 
       <a href="https://github.com/evertondavid" target="_blank" id="btn-projects"><ion-icon name="share-social-outline"></ion-icon><span>Projects</span></a>
+
       <h2 id="skills-section-title">My Skills</h2>
       <p class="description">My Technologies</p>
       <div id="skills-container">
+        <!-- AI & Vibe Coding -->
+        <div class="skills-box">
+          <p class="skills-title">AI & Vibe Coding</p>
+          <i class="devicon-github-original" title="GitHub Copilot"></i>
+          <i class="devicon-openai-plain" title="OpenAI • LLMs"></i>
+          <i class="devicon-tensorflow-original colored" title="TensorFlow • ML"></i>
+          <i class="devicon-pytorch-original colored" title="PyTorch • ML"></i>
+          <i class="devicon-scikitlearn-plain colored" title="Scikit-learn"></i>
+          <i class="devicon-swagger-plain colored" title="Spec-Driven • OpenAPI/Swagger"></i>
+          <ion-icon class="skill-icon" name="sparkles-outline" title="Claude (Anthropic)"></ion-icon>
+        </div>
+
+        <!-- Front-end -->
         <div class="skills-box">
           <p class="skills-title">Front-end</p>
           <i class="devicon-html5-plain colored"></i>
@@ -69,31 +93,52 @@
           <i class="devicon-react-original colored"></i>
           <i class="devicon-angular-plain colored"></i>
         </div>
+
+        <!-- Back-end -->
         <div class="skills-box">
           <p class="skills-title">Back-end</p>
           <i class="devicon-csharp-plain colored"></i>
+          <i class="devicon-dotnetcore-plain colored" title=".NET Core"></i>
           <i class="devicon-nodejs-plain colored"></i>
           <i class="devicon-java-plain colored"></i>
-          <i class="devicon-spring-original colored"></i>
+          <i class="devicon-spring-original colored" title="Spring Boot"></i>
         </div>
+
+        <!-- Databases -->
         <div class="skills-box">
           <p class="skills-title">Databases</p>
           <i class="devicon-azuresqldatabase-plain colored"></i>
           <i class="devicon-postgresql-plain colored"></i>
           <i class="devicon-mysql-plain colored"></i>
         </div>
+
+        <!-- DevOps & Cloud -->
         <div class="skills-box">
-          <p class="skills-title">Tools & DevOps</p>
+          <p class="skills-title">DevOps & Cloud</p>
           <i class="devicon-linux-plain colored"></i>
           <i class="devicon-bash-plain colored"></i>
-          <i class="devicon-dotnetcore-plain colored"></i>
+          <i class="devicon-docker-plain colored"></i>
+          <i class="devicon-kubernetes-plain colored"></i>
+          <i class="devicon-terraform-plain colored"></i>
+          <i class="devicon-azure-plain colored"></i>
+          <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+        </div>
+
+        <!-- Tools & Productivity -->
+        <div class="skills-box">
+          <p class="skills-title">Tools & Productivity</p>
           <i class="devicon-postman-plain colored"></i>
           <i class="devicon-powershell-plain colored"></i>
+          <i class="devicon-git-plain colored"></i>
+          <i class="devicon-vscode-plain colored"></i>
         </div>
+
+        <!-- Project & Agile Management -->
         <div class="skills-box">
-          <p class="skills-title">Project & Agile Management</p>
+          <p class="skills-title">Agile Management</p>
           <i class="devicon-jira-plain colored"></i>
           <i class="devicon-confluence-plain colored"></i>
+          <i class="devicon-trello-plain colored" title="Kanban"></i>
         </div>
       </div>
 
@@ -104,6 +149,9 @@
   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+
+  <!--Language Switcher-->
+  <script src="js/language.js"></script>
 </body>
 
 </html>

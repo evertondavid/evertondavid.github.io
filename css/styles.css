@@ -7,10 +7,12 @@
 
 /* Variáveis */
 :root {
-  --main-color: #122a57;
-  --main-text-color: #fff;
-  --secondary-color: #999;
-  --highlight-color: #ffd700;
+  --main-color: #54B689;
+  --main-text-color: #FFF;
+  --border-color: #999;
+  --bio-bg-color: #1E2A3A;
+  --bio-border-color: #293544;
+  --about-bg-color: #111821;
 }
 
 /* Container principal */
@@ -26,10 +28,10 @@
 #bio-container {
   flex: 1 1 20%;
   height: 100vh;
-  background-color: var(--main-color);
+  background-color: var(--bio-bg-color);
   text-align: center;
   padding: 30px 12px;
-  border-right: 5px solid var(--highlight-color);
+  border-right: 5px solid var(--bio-border-color);
   overflow-y: auto;
 }
 
@@ -56,7 +58,9 @@
   display: flex;
   justify-content: center;
   list-style: none;
+  border-bottom: 1px solid var(--border-color);
   margin-bottom: 25px;
+  padding-bottom: 25px;
 }
 
 #social-container li {
@@ -65,7 +69,7 @@
 }
 
 #social-container li a {
-  color: var(--highlight-color);
+  color: var(--main-color);
   font-size: 30px;
 }
 
@@ -86,14 +90,14 @@
 }
 
 #mail-container ion-icon {
-  color: var(--highlight-color);
+  color: var(--main-color);
   font-size: 20px;
   margin-right: 5px;
   max-width: 20px;
 }
 
 .highlight {
-  color: var(--highlight-color);
+  color: var(--main-color);
   font-weight: bold;
 }
 
@@ -102,8 +106,8 @@
   flex: 1 1 80%;
   height: 100vh;
   padding: 50px 30px;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: var(--about-bg-color);
+  color: var(--main-text-color);
   overflow-y: auto;
 }
 
@@ -111,11 +115,10 @@
   font-size: 42px;
   font-weight: bold;
   margin-bottom: 30px;
-  color: var(--main-color);
 }
 
 .description {
-  max-width: 75%;
+  max-width: 100%;
   margin-bottom: 20px;
   line-height: 1.4rem;
 }
@@ -159,7 +162,8 @@
   font-size: 32px;
   margin-top: 30px;
   margin-bottom: 20px;
-  color: var(--main-color);
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
 }
 
 #skills-container {
@@ -172,27 +176,124 @@
 .skills-box {
   flex: 1 1 30%;
   min-width: 250px;
-  background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .skills-title {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 24px;
   margin-bottom: 15px;
-  color: var(--main-color);
-  text-align: center;
+  font-weight: bold;
+  padding-left: 10px;
+  border-left: 5px solid var(--main-color);
 }
 
 .skills-box i {
   font-size: 45px;
   margin: 10px;
+  line-height: 1;
+  vertical-align: middle;
 }
 
-/* Responsive */
+.skills-box ion-icon,
+.skill-icon {
+  font-size: 45px;
+  margin: 10px;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* Linux (Tux colorido) alinhado com os demais ícones */
+.skills-box i.devicon-linux-plain,
+.skills-box i.devicon-linux-plain.colored {
+  font-size: 45px !important;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  background: center/contain no-repeat url('https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg');
+  margin: 10px;
+  vertical-align: middle;
+  transform: translateY(2px);
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .6));
+}
+
+/* Garantir visibilidade no tema escuro (GitHub/OpenAI) */
+.skills-box i.devicon-github-original,
+.skills-box i.devicon-openai-plain {
+  color: #fff;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .5));
+}
+
+.skills-box i.devicon-linux-plain::before,
+.skills-box i.devicon-linux-plain.colored::before {
+  content: '' !important;
+}
+
+/* Language Switcher - canto superior direito fixo */
+#language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+  background-color: transparent;
+  /* sem fundo */
+  padding: 0;
+  /* sem padding da caixinha */
+  border-radius: 0;
+  /* sem borda arredondada */
+  backdrop-filter: none;
+  /* sem blur */
+  box-shadow: none;
+  /* sem sombra */
+}
+
+.lang-btn {
+  background: transparent;
+  /* sem fundo */
+  border: none;
+  /* sem borda */
+  border-radius: 5px;
+  padding: 0;
+  /* remove padding para ficar só a bandeira */
+  cursor: pointer;
+  transition: none;
+  /* sem animação */
+}
+
+.lang-btn:hover {
+  background: transparent;
+  /* sem hover */
+  transform: none;
+  /* sem efeito */
+  border: none;
+}
+
+.lang-btn.active {
+  background: transparent;
+  /* sem fundo ativo */
+  border: none;
+}
+
+.lang-btn .flag {
+  font-size: 24px;
+  display: block;
+}
+
+
+
 @media (max-width: 768px) {
+  #language-switcher {
+    top: 10px;
+    right: 10px;
+    padding: 0;
+    /* mantém sem padding no mobile */
+  }
+
+  .lang-btn .flag {
+    font-size: 20px;
+  }
+
   #container {
     flex-direction: column;
     height: auto;
@@ -202,7 +303,7 @@
   #bio-container {
     height: auto;
     border-right: none;
-    border-bottom: 5px solid var(--highlight-color);
+    border-bottom: 5px solid var(--bio-border-color);
   }
 
   #about-container {
