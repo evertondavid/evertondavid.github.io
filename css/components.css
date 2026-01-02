@@ -1,0 +1,188 @@
+/* Components */
+
+/* Bio Image */
+#bio-img {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  margin-bottom: var(--spacing-lg);
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 0 20px rgba(80, 250, 123, 0.3);
+  transition: var(--transition-default);
+}
+
+#bio-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(80, 250, 123, 0.5);
+}
+
+/* Social Links */
+#social-container {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+}
+
+#social-container li {
+  flex: 1 1 0;
+  max-width: 60px;
+}
+
+#social-container li a {
+  color: var(--cyan-color);
+  font-size: var(--spacing-xl);
+  transition: var(--transition-fast);
+}
+
+#social-container li a:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 8px rgba(80, 250, 123, 0.4));
+}
+
+/* Mail Container */
+#mail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mail-container ion-icon {
+  color: var(--primary-color);
+  font-size: var(--font-sm);
+  margin-right: var(--spacing-xs);
+  flex-shrink: 0;
+}
+
+#mail-container a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  max-width: 225px;
+  transition: var(--transition-fast);
+}
+
+#mail-container a:hover {
+  color: var(--cyan-color);
+}
+
+/* Projects Button */
+#btn-projects {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--bio-bg-color);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--cyan-color) 100%);
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: var(--transition-default);
+  margin: var(--spacing-lg) 0;
+  padding: 12px var(--spacing-sm);
+  width: 150px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  box-shadow: var(--shadow-md);
+}
+
+#btn-projects ion-icon {
+  font-size: var(--font-sm);
+  flex-shrink: 0;
+}
+
+#btn-projects:hover {
+  background: transparent;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Language Switcher */
+#language-switcher {
+  position: fixed;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  display: flex;
+  gap: var(--spacing-sm);
+  z-index: 1000;
+  background: var(--card-bg-color);
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  opacity: 0.6;
+}
+
+.lang-btn:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.lang-btn.active {
+  opacity: 1;
+  filter: drop-shadow(0 0 8px rgba(80, 250, 123, 0.6));
+}
+
+.lang-btn .flag {
+  font-size: var(--font-md);
+  display: block;
+}
+
+/* Skills Icons */
+.skills-box i,
+.skills-box ion-icon,
+.skill-icon {
+  font-size: var(--font-icon);
+  margin: var(--spacing-sm);
+  line-height: 1;
+  vertical-align: middle;
+  transition: var(--transition-fast);
+}
+
+.skills-box i:hover,
+.skills-box ion-icon:hover,
+.skill-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  filter: drop-shadow(0 5px 15px rgba(80, 250, 123, 0.4));
+}
+
+/* Ícones específicos com melhor visibilidade */
+.skills-box i.devicon-github-original,
+.skills-box i.devicon-openai-plain {
+  color: var(--icon-color-light);
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, .3));
+}
+
+.skills-box i.devicon-github-original:hover,
+.skills-box i.devicon-openai-plain:hover {
+  color: var(--primary-color);
+  filter: drop-shadow(0 5px 15px rgba(80, 250, 123, 0.6));
+}
+
+/* Linux Tux colorido */
+.skills-box i.devicon-linux-plain.colored {
+  background: center/contain no-repeat url('https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg');
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, .3));
+}
+
+.skills-box i.devicon-linux-plain.colored:hover {
+  filter: drop-shadow(0 5px 15px rgba(80, 250, 123, 0.6));
+}
+
+.skills-box i.devicon-linux-plain.colored::before {
+  content: '' !important;
+}

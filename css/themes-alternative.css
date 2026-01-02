@@ -1,0 +1,163 @@
+/* 
+ * TEMAS ALTERNATIVOS - Descomente um bloco para usar
+ * Copie as variáveis desejadas para variables.css
+ */
+
+/* ============================================
+   TEMA 1: GitHub Dark Dimmed (ATIVO)
+   ============================================ */
+/* Este é o tema atual em variables.css */
+
+/* ============================================
+   TEMA 2: One Dark Pro (VS Code Popular)
+   ============================================ */
+/*
+:root {
+  --primary-color: #98c379;
+  --secondary-color: #c678dd;
+  --accent-color: #e06c75;
+  --cyan-color: #61afef;
+  
+  --main-text-color: #abb2bf;
+  --heading-color: #e6e6e6;
+  
+  --bio-bg-color: #282c34;
+  --about-bg-color: #21252b;
+  --card-bg-color: #2c313c;
+  --hover-bg-color: #3e4451;
+  
+  --border-color: #3e4451;
+}
+*/
+
+/* ============================================
+   TEMA 3: Night Owl (Sarah Drasner)
+   ============================================ */
+/*
+:root {
+  --primary-color: #7fdbca;
+  --secondary-color: #c792ea;
+  --accent-color: #ff5874;
+  --cyan-color: #82aaff;
+  
+  --main-text-color: #d6deeb;
+  --heading-color: #ffffff;
+  
+  --bio-bg-color: #011627;
+  --about-bg-color: #01111d;
+  --card-bg-color: #112630;
+  --hover-bg-color: #1d3b53;
+  
+  --border-color: #1d3b53;
+}
+*/
+
+/* ============================================
+   TEMA 4: Material Ocean (Google Design)
+   ============================================ */
+/*
+:root {
+  --primary-color: #89ddff;
+  --secondary-color: #c792ea;
+  --accent-color: #f07178;
+  --cyan-color: #89ddff;
+  
+  --main-text-color: #b0bec5;
+  --heading-color: #ffffff;
+  
+  --bio-bg-color: #0f111a;
+  --about-bg-color: #1e2029;
+  --card-bg-color: #252837;
+  --hover-bg-color: #2e3440;
+  
+  --border-color: #37474f;
+}
+*/
+
+/* ============================================
+   TEMA 5: Nord (Arctic, clean and elegant)
+   ============================================ */
+/*
+:root {
+  --primary-color: #88c0d0;
+  --secondary-color: #b48ead;
+  --accent-color: #bf616a;
+  --cyan-color: #8fbcbb;
+  
+  --main-text-color: #d8dee9;
+  --heading-color: #eceff4;
+  
+  --bio-bg-color: #2e3440;
+  --about-bg-color: #3b4252;
+  --card-bg-color: #434c5e;
+  --hover-bg-color: #4c566a;
+  
+  --border-color: #4c566a;
+}
+*/
+
+/* ============================================
+   TEMA 6: Synthwave '84 (Neon Retro)
+   ============================================ */
+/*
+:root {
+  --primary-color: #f97e72;
+  --secondary-color: #b893ce;
+  --accent-color: #fede5d;
+  --cyan-color: #72f1b8;
+  
+  --main-text-color: #ffffff;
+  --heading-color: #fede5d;
+  
+  --bio-bg-color: #241b2f;
+  --about-bg-color: #2b213a;
+  --card-bg-color: #36294c;
+  --hover-bg-color: #463659;
+  
+  --border-color: #495495;
+}
+*/
+
+/* ============================================
+   TEMA 7: Tokyo Night (Storm variant)
+   ============================================ */
+/*
+:root {
+  --primary-color: #73daca;
+  --secondary-color: #bb9af7;
+  --accent-color: #f7768e;
+  --cyan-color: #7dcfff;
+  
+  --main-text-color: #a9b1d6;
+  --heading-color: #c0caf5;
+  
+  --bio-bg-color: #24283b;
+  --about-bg-color: #1a1b26;
+  --card-bg-color: #292e42;
+  --hover-bg-color: #343b58;
+  
+  --border-color: #343b58;
+}
+*/
+
+/* ============================================
+   TEMA 8: Monokai Pro (Classic)
+   ============================================ */
+/*
+:root {
+  --primary-color: #a9dc76;
+  --secondary-color: #ab9df2;
+  --accent-color: #ff6188;
+  --cyan-color: #78dce8;
+  
+  --main-text-color: #fcfcfa;
+  --heading-color: #ffffff;
+  
+  --bio-bg-color: #2d2a2e;
+  --about-bg-color: #221f22;
+  --card-bg-color: #3a3739;
+  --hover-bg-color: #403e41;
+  
+  --border-color: #5b595c;
+}
+*/

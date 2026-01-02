@@ -1,59 +1,62 @@
-// Traduções
-const translations = {
-  en: {
-    welcome: "Welcome",
-    about: "About",
-    aboutText1: "With <span class='highlight'>15+ years of experience</span> in technology, a degree in <span class='highlight'>Information Systems</span>, and postgraduate studies in <span class='highlight'>Project Management, Leadership, and Software Engineering</span>, I excel in strategic leadership, large-scale project management, and digital transformation.",
-    aboutText2: "I develop and implement scalable, integrated solutions that drive efficiency and foster innovation. Leading a diverse team, I am committed to cultivating a high-performance environment where creativity thrives.",
-    aboutText3: "My expertise encompasses <span class='highlight'>negotiation, budget management, ROI analysis, and the management of complex contracts (SLAs and SLOs),</span>, ensuring both financial and operational excellence. I deeply understand predictive and incremental project methodologies, IT outsourcing, and deploying transformative corporate technologies.",
-    aboutText4: "As a passionate leader focused on <span class='highlight'>talent development</span>, I mentor multidisciplinary and <span class='highlight'>global teams</span>, striving to create opportunities for professional growth that align with the business's evolving needs.",
-    projects: "Projects",
-    skills: "My Skills",
-    technologies: "My Technologies"
-  },
-  pt: {
-    welcome: "Bem-vindo",
-    about: "Sobre",
-    aboutText1: "Com <span class='highlight'>mais de 15 anos de experiência</span> em tecnologia, graduado em <span class='highlight'>Sistemas de Informação</span> e pós-graduado em <span class='highlight'>Gestão de Projetos, Liderança e Engenharia de Software</span>, me destaco em liderança estratégica, gestão de projetos de grande escala e transformação digital.",
-    aboutText2: "Desenvolvo e implemento soluções escaláveis e integradas que impulsionam eficiência e fomentam inovação. Liderando equipes diversas, cultivo uma cultura de alta performance onde a criatividade prospera.",
-    aboutText3: "Minha expertise abrange <span class='highlight'>negociação, gestão orçamentária, análise de ROI e gestão de contratos complexos (SLAs e SLOs)</span>, garantindo excelência financeira e operacional. Tenho profundo conhecimento em metodologias preditivas e incrementais, terceirização de TI e implantação de tecnologias corporativas transformadoras.",
-    aboutText4: "Como líder apaixonado focado em <span class='highlight'>desenvolvimento de talentos</span>, mentoro equipes multidisciplinares e <span class='highlight'>globais</span>, buscando criar oportunidades de crescimento profissional alinhadas às necessidades em evolução do negócio.",
-    projects: "Projetos",
-    skills: "Minhas Habilidades",
-    technologies: "Minhas Tecnologias"
-  }
+// DOM Elements Cache - evita múltiplas queries
+const elements = {
+  welcomeText: document.getElementById('welcome-text'),
+  title: document.getElementById('title'),
+  descriptions: document.querySelectorAll('.description'),
+  btnProjectsSpan: document.querySelector('#btn-projects span'),
+  skillsTitle: document.getElementById('skills-section-title'),
+  langButtons: document.querySelectorAll('.lang-btn')
 };
 
-// Estado atual
-let currentLang = 'en';
+// Estado da aplicação
+let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+let translations = {};
 
-// Função de tradução
+// Carrega traduções do arquivo JSON
+async function loadTranslations() {
+  try {
+    const response = await fetch('js/translations.json');
+    translations = await response.json();
+    translatePage(currentLang);
+  } catch (error) {
+    console.error('Erro ao carregar traduções:', error);
+  }
+}
+
+// Atualiza a página com o idioma selecionado
 function translatePage(lang) {
+  if (!translations[lang]) return;
+
   currentLang = lang;
+  const t = translations[lang];
 
   // Atualiza textos
-  document.getElementById('welcome-text').textContent = translations[lang].welcome;
-  document.getElementById('title').textContent = translations[lang].about;
-  document.querySelectorAll('.description')[0].innerHTML = translations[lang].aboutText1;
-  document.querySelectorAll('.description')[1].innerHTML = translations[lang].aboutText2;
-  document.querySelectorAll('.description')[2].innerHTML = translations[lang].aboutText3;
-  document.querySelectorAll('.description')[3].innerHTML = translations[lang].aboutText4;
-  document.querySelector('#btn-projects span').textContent = translations[lang].projects;
-  document.getElementById('skills-section-title').textContent = translations[lang].skills;
-  document.querySelectorAll('.description')[4].textContent = translations[lang].technologies;
+  elements.welcomeText.textContent = t.welcome;
+  elements.title.textContent = t.about;
+  elements.descriptions[0].innerHTML = t.aboutText1;
+  elements.descriptions[1].innerHTML = t.aboutText2;
+  elements.descriptions[2].innerHTML = t.aboutText3;
+  elements.descriptions[3].innerHTML = t.aboutText4;
+  elements.btnProjectsSpan.textContent = t.projects;
+  elements.skillsTitle.textContent = t.skills;
+  elements.descriptions[4].textContent = t.technologies;
 
   // Atualiza botões ativos
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-  document.getElementById(`lang-${lang}`).classList.add('active');
+  updateActiveButton(lang);
 
   // Salva preferência
   localStorage.setItem('preferredLanguage', lang);
+}
+
+// Atualiza o botão ativo
+function updateActiveButton(lang) {
+  elements.langButtons.forEach(btn => btn.classList.remove('active'));
+  document.getElementById(`lang-${lang}`).classList.add('active');
 }
 
 // Event listeners
 document.getElementById('lang-en').addEventListener('click', () => translatePage('en'));
 document.getElementById('lang-pt').addEventListener('click', () => translatePage('pt'));
 
-// Carrega idioma salvo ou padrão (inglês)
-const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-translatePage(savedLang);
+// Inicializa a aplicação
+loadTranslations();

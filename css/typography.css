@@ -1,0 +1,58 @@
+/* Typography */
+
+#bio-container h2 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--heading-color);
+  font-weight: 700;
+}
+
+#bio-container p {
+  margin-bottom: var(--spacing-md);
+  color: var(--main-text-color);
+}
+
+#bio-container #welcome-text {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+#title {
+  font-size: var(--font-xl);
+  font-weight: bold;
+  margin-bottom: var(--spacing-xl);
+  color: var(--heading-color);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--cyan-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  max-width: 100%;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6rem;
+  color: var(--main-text-color);
+}
+
+.highlight {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+#skills-section-title {
+  font-size: var(--font-lg);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--spacing-md);
+  color: var(--heading-color);
+}
+
+.skills-title {
+  font-size: var(--font-md);
+  margin-bottom: 15px;
+  font-weight: bold;
+  padding-left: var(--spacing-sm);
+  border-left: 5px solid var(--primary-color);
+  color: var(--heading-color);
+}

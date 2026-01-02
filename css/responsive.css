@@ -1,0 +1,33 @@
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  #language-switcher {
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+  }
+
+  .lang-btn .flag {
+    font-size: var(--font-sm);
+  }
+
+  #container {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+
+  #bio-container {
+    height: auto;
+    border-right: none;
+    border-bottom: 5px solid var(--bio-border-color);
+  }
+
+  #about-container {
+    height: auto;
+    overflow-y: visible;
+  }
+
+  #btn-projects {
+    margin: var(--spacing-md) auto;
+  }
+}

@@ -1,0 +1,71 @@
+/* Variáveis CSS - Tema Moderno GitHub Dark Inspired */
+:root {
+  /* Primary Colors - Inspirado em GitHub Dark Dimmed + Dracula */
+  --primary-color: #50fa7b;
+  /* Verde vibrante (Dracula Green) */
+  --secondary-color: #bd93f9;
+  /* Roxo suave (Dracula Purple) */
+  --accent-color: #ff79c6;
+  /* Rosa accent (Dracula Pink) */
+  --cyan-color: #8be9fd;
+  /* Cyan para links (Dracula Cyan) */
+
+  /* Text Colors */
+  --main-text-color: #e6edf3;
+  /* Branco suave (GitHub) */
+  --secondary-text-color: #9198a1;
+  /* Cinza para texto secundário */
+  --heading-color: #ffffff;
+  /* Branco puro para títulos */
+
+  /* Background Colors - Mais claros e modernos */
+  --bio-bg-color: #22272e;
+  /* GitHub Dark Dimmed Sidebar */
+  --about-bg-color: #2d333b;
+  /* GitHub Dark Dimmed Main */
+  --card-bg-color: #373e47;
+  /* Cards/Skills boxes */
+  --hover-bg-color: #444c56;
+  /* Hover state */
+
+  /* Border Colors */
+  --border-color: #444c56;
+  /* GitHub border */
+  --bio-border-color: #373e47;
+  --subtle-border: #373e47;
+
+  /* Semantic Colors */
+  --success-color: #3fb950;
+  /* GitHub success green */
+  --warning-color: #f0883e;
+  /* Orange warning */
+  --error-color: #f85149;
+  /* Red error */
+
+  /* Icon Colors - Melhor visibilidade */
+  --icon-color-light: #e6edf3;
+  --icon-color-dark: #1f2328;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
+
+  /* Spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 25px;
+  --spacing-xl: 30px;
+
+  /* Font sizes */
+  --font-sm: 20px;
+  --font-md: 24px;
+  --font-lg: 32px;
+  --font-xl: 42px;
+  --font-icon: 45px;
+
+  /* Transitions */
+  --transition-default: 0.3s ease;
+  --transition-fast: 0.15s ease;
+}
