@@ -31,6 +31,16 @@
   opacity: 0.5;
 }
 
+/* Borda vertical - Tema Claro */
+[data-theme="light"] #bio-container {
+  border-right: none;
+}
+
+[data-theme="light"] #bio-container::before {
+  background: linear-gradient(to bottom, #4a90e2 0%, #6fa8dc 30%, #8bb9e8 60%, #a7cff0 100%);
+  opacity: 0.8;
+}
+
 /* About Section */
 #about-container {
   flex: 1 1 80%;

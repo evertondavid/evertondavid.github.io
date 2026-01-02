@@ -56,3 +56,26 @@
   border-left: 5px solid var(--primary-color);
   color: var(--heading-color);
 }
+
+/* Typography - Tema Claro */
+[data-theme="light"] #title {
+  background: linear-gradient(135deg, #0366d6 0%, #4a90e2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] #skills-section-title {
+  background: linear-gradient(135deg, #0366d6 0%, #4a90e2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] .description {
+  color: #4a5568;
+}
+
+[data-theme="light"] #bio-container p {
+  color: #4a5568;
+}

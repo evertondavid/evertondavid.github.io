@@ -35,12 +35,27 @@
   color: var(--cyan-color);
   font-size: var(--spacing-xl);
   transition: var(--transition-fast);
+  display: inline-block;
 }
 
 #social-container li a:hover {
   color: var(--primary-color);
   transform: translateY(-3px);
   filter: drop-shadow(0 4px 8px rgba(80, 250, 123, 0.4));
+}
+
+#social-container li a:hover ion-icon {
+  transform: scale(1.15);
+}
+
+/* Social Links - Tema Claro */
+[data-theme="light"] #social-container li a {
+  color: var(--primary-color);
+}
+
+[data-theme="light"] #social-container li a:hover {
+  color: var(--primary-color);
+  filter: drop-shadow(0 4px 8px rgba(3, 102, 214, 0.5)) brightness(1.2);
 }
 
 /* Mail Container */
@@ -101,6 +116,22 @@
   box-shadow: var(--shadow-lg);
 }
 
+/* Botão Projects - Tema Claro */
+[data-theme="light"] #btn-projects {
+  background: linear-gradient(135deg, #0366d6 0%, #4a90e2 50%, #6fa8dc 100%);
+  color: #ffffff;
+  border: 2px solid #0366d6;
+  box-shadow: 0 4px 8px rgba(3, 102, 214, 0.2);
+}
+
+[data-theme="light"] #btn-projects:hover {
+  background: linear-gradient(135deg, #0250b0 0%, #3a7bc8 50%, #5a8ec2 100%);
+  color: #ffffff;
+  border-color: #0250b0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(3, 102, 214, 0.3);
+}
+
 /* Language Switcher */
 #language-switcher {
   position: fixed;
@@ -113,6 +144,15 @@
   padding: 8px;
   border-radius: 8px;
   box-shadow: var(--shadow-md);
+  border: 2px solid var(--border-color);
+  transition: all var(--transition-default);
+}
+
+#language-switcher:hover {
+  background: var(--hover-bg-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 .lang-btn {
@@ -139,16 +179,133 @@
   display: block;
 }
 
+/* Theme Switcher - Botão de Tema */
+#theme-toggle {
+  position: fixed;
+  top: var(--spacing-md);
+  right: 140px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg-color);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-default);
+  padding: 0;
+}
+
+#theme-toggle:hover {
+  background: var(--hover-bg-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+#theme-toggle:active {
+  transform: translateY(0);
+}
+
+/* Ícones de Sol e Lua */
+#theme-toggle .sun-icon,
+#theme-toggle .moon-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* Filtro para colorir o SVG com a cor primária */
+  filter: brightness(0) saturate(100%) invert(71%) sepia(65%) saturate(460%) hue-rotate(85deg) brightness(102%) contrast(97%);
+}
+
+/* Ajuste de cor para tema claro */
+[data-theme="light"] #theme-toggle .sun-icon,
+[data-theme="light"] #theme-toggle .moon-icon {
+  filter: brightness(0) saturate(100%) invert(25%) sepia(93%) saturate(1798%) hue-rotate(199deg) brightness(95%) contrast(101%);
+}
+
+/* No tema escuro, mostra o sol (para mudar para claro) */
+:root #theme-toggle .sun-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+:root #theme-toggle .moon-icon {
+  opacity: 0;
+  transform: rotate(180deg) scale(0);
+}
+
+/* No tema claro, mostra a lua (para mudar para escuro) */
+[data-theme="light"] #theme-toggle .sun-icon {
+  opacity: 0;
+  transform: rotate(-180deg) scale(0);
+}
+
+[data-theme="light"] #theme-toggle .moon-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Animação de rotação quando clicado */
+#theme-toggle.rotating .sun-icon,
+#theme-toggle.rotating .moon-icon {
+  animation: rotate360 0.5s ease-in-out;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Skills Icons */
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
 .skills-box i,
-.skills-box ion-icon,
+.skills-box ion-icon {
+  font-size: var(--font-icon);
+  line-height: 1;
+  vertical-align: middle;
+  transition: var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+}
+
 .skill-icon {
   font-size: var(--font-icon);
-  margin: 10px;
-  /* Aumentado de 8px para 10px para mais espaço entre ícones */
-  line-height: 1.2;
-  /* Aumentado para melhor espaçamento vertical */
+  line-height: 1;
   vertical-align: middle;
+  transition: var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+}
+
+/* OpenAI Icon */
+.openai-icon {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  background: url('../img/openai.svg') center/contain no-repeat;
   transition: var(--transition-fast);
 }
 
@@ -191,4 +348,31 @@
 
 .skills-box i.devicon-linux-plain.colored::before {
   content: '' !important;
+}
+
+/* Skills Icons - Tema Claro */
+[data-theme="light"] .skills-box i.devicon-angular-plain {
+  color: #dd0031 !important;
+}
+
+[data-theme="light"] .skills-box i.devicon-github-original {
+  color: #24292e !important;
+  filter: none !important;
+}
+
+[data-theme="light"] .skills-box i.devicon-openai-plain {
+  color: #412991 !important;
+  filter: none !important;
+}
+
+[data-theme="light"] .skills-box i.devicon-bash-plain,
+[data-theme="light"] .skills-box i.devicon-csharp-plain {
+  color: #24292e !important;
+  filter: none !important;
+}
+
+[data-theme="light"] .skills-box i:hover,
+[data-theme="light"] .skills-box ion-icon:hover,
+[data-theme="light"] .skill-icon:hover {
+  filter: drop-shadow(0 4px 12px rgba(3, 102, 214, 0.4));
 }

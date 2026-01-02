@@ -70,3 +70,58 @@
   --transition-default: 0.3s ease;
   --transition-fast: 0.15s ease;
 }
+
+/* ===== TEMA CLARO - Soft Professional Mode ===== */
+/* Inspirado em VS Code Light+, Slack e Linear - Tons suaves e confortáveis */
+[data-theme="light"] {
+  /* Primary Colors - Azul suave e elegante */
+  --primary-color: #0366d6;
+  /* Azul médio (GitHub / VS Code) */
+  --secondary-color: #6f42c1;
+  /* Roxo suave */
+  --accent-color: #d73a49;
+  /* Vermelho suave para acentos */
+  --cyan-color: #0366d6;
+  /* Azul para links */
+
+  /* Text Colors - Alto contraste no light mode */
+  --main-text-color: #24292e;
+  /* Cinza escuro (melhor que preto puro) */
+  --secondary-text-color: #586069;
+  /* Cinza médio */
+  --heading-color: #1b1f23;
+  /* Cinza profundo para títulos */
+
+  /* Background Colors - Paleta soft blue-gray */
+  --bio-bg-color: #dde1e6;
+  /* Cinza médio para destacar a foto */
+  --about-bg-color: #e8ecf0;
+  /* Cinza claro mais definido */
+  --card-bg-color: #d6dce3;
+  /* Cinza azulado para cards */
+  --hover-bg-color: #cdd3da;
+  /* Hover mais definido */
+
+  /* Border Colors */
+  --border-color: #cbd2d9;
+  /* Cinza azulado médio */
+  --bio-border-color: #cbd2d9;
+  --subtle-border: #dfe3e8;
+
+  /* Semantic Colors - Adaptados para light mode */
+  --success-color: #0969da;
+  /* Azul para sucesso */
+  --warning-color: #bf8700;
+  /* Amarelo escuro */
+  --error-color: #cf222e;
+  /* Vermelho GitHub */
+
+  /* Icon Colors */
+  --icon-color-light: #1f2328;
+  --icon-color-dark: #ffffff;
+
+  /* Shadows - Mais sutis no light mode */
+  --shadow-sm: 0 1px 3px rgba(31, 35, 40, 0.12);
+  --shadow-md: 0 4px 6px rgba(31, 35, 40, 0.15);
+  --shadow-lg: 0 10px 25px rgba(31, 35, 40, 0.18);
+}
