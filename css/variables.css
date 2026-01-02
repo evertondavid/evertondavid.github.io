@@ -63,7 +63,8 @@
   --font-md: 24px;
   --font-lg: 32px;
   --font-xl: 42px;
-  --font-icon: 45px;
+  --font-icon: 36px;
+  /* Reduzido de 45px para 36px */
 
   /* Transitions */
   --transition-default: 0.3s ease;

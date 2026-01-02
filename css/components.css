@@ -144,8 +144,10 @@
 .skills-box ion-icon,
 .skill-icon {
   font-size: var(--font-icon);
-  margin: var(--spacing-sm);
-  line-height: 1;
+  margin: 10px;
+  /* Aumentado de 8px para 10px para mais espaço entre ícones */
+  line-height: 1.2;
+  /* Aumentado para melhor espaçamento vertical */
   vertical-align: middle;
   transition: var(--transition-fast);
 }
@@ -153,21 +155,25 @@
 .skills-box i:hover,
 .skills-box ion-icon:hover,
 .skill-icon:hover {
-  transform: translateY(-5px) scale(1.1);
-  filter: drop-shadow(0 5px 15px rgba(80, 250, 123, 0.4));
+  transform: translateY(-3px) scale(1.08);
+  filter: drop-shadow(0 4px 12px rgba(80, 250, 123, 0.4));
 }
 
 /* Ícones específicos com melhor visibilidade */
 .skills-box i.devicon-github-original,
-.skills-box i.devicon-openai-plain {
+.skills-box i.devicon-openai-plain,
+.skills-box i.devicon-bash-plain,
+.skills-box i.devicon-csharp-plain {
   color: var(--icon-color-light);
-  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, .3));
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, .3)) brightness(1.4);
 }
 
 .skills-box i.devicon-github-original:hover,
-.skills-box i.devicon-openai-plain:hover {
+.skills-box i.devicon-openai-plain:hover,
+.skills-box i.devicon-bash-plain:hover,
+.skills-box i.devicon-csharp-plain:hover {
   color: var(--primary-color);
-  filter: drop-shadow(0 5px 15px rgba(80, 250, 123, 0.6));
+  filter: drop-shadow(0 5px 15px rgba(80, 250, 123, 0.6)) brightness(1.6);
 }
 
 /* Linux Tux colorido */

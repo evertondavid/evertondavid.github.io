@@ -36,10 +36,9 @@ function translatePage(lang) {
   elements.descriptions[0].innerHTML = t.aboutText1;
   elements.descriptions[1].innerHTML = t.aboutText2;
   elements.descriptions[2].innerHTML = t.aboutText3;
-  elements.descriptions[3].innerHTML = t.aboutText4;
   elements.btnProjectsSpan.textContent = t.projects;
   elements.skillsTitle.textContent = t.skills;
-  elements.descriptions[4].textContent = t.technologies;
+  elements.descriptions[3].textContent = t.technologies;
 
   // Atualiza botões ativos
   updateActiveButton(lang);
